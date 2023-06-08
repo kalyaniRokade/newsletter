@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>    
+  /* - Dark Slate Grey: hsl(234, 29%, 20%)
+- Charcoal Grey: hsl(235, 18%, 26%)
+- Grey: hsl(231, 7%, 60%)
+- White: hsl(0, 0%, 100%)
+- Tomato: hsl(4, 100%, 67%) */
+    *{ 
+      font-family: poppins;
+    }
+        body{ 
+          margin:0; 
+          width:1440px; 
+          height:100vh;
+          display:flex;    
+          justify-content: center; 
+          align-items: center;
+          background-color: hsl(234, 29%, 20%);
+          
+        }
+      .flex_b{   
+        background-color:hsl(0, 0%, 100%) ;
+          display:flex; 
+          flex-direction: row;
+           width:800px; 
+          height:500px; 
+          border-style: solid; 
+          padding-left:45px; 
+          /* padding-right:px;  */
+          padding-top:25px; 
+          padding-bottom: 25px; 
+          
+          border-style: none; 
+          border-radius:20px;  
+          
+        
+         
+      }  
+      .temp{  
+        
+        height:500px;
+        margin-left:20px; 
+        margin-right:25px;
+      }  
+      .update{ 
+        display:flex; 
+        flex-direction:row;  
+        align-items:center; 
+        
+       
+      } 
+      .icon{  
+          width:18px; 
+          margin-right:15px; 
+          
+      } 
+      .tags{ 
+        margin:0px; 
+        margin-bottom:10px; 
+        
+      }
+      .mail{ 
+        width:380px; 
+        margin-bottom:25px; 
+        margin-top:15px;
+        height:40px; 
+        text-align: center;  
+         border-style: solid; 
+        border-radius:5px; 
+      }
+      h1{ 
+        font-size:40px; 
+        margin-bottom:0px; 
+        margin-top:25px;
+      }  
+      p{ 
+        font-size:15px;  
+        color: hsl(235, 18%, 26%); 
+      
+      }
+      .er_mess{ 
+        position:absolute;
+        top:0px;
+        right:35px;
+        margin:0px;
+        color:hsl(4, 83%, 56%);
+      } 
+      .er_butn{ 
+        width:390px;
+        height:50px;
+        color:hsl(4, 83%, 56%);
+        border-color: hsl(4, 83%, 56%);
+        background-color: hsl(4, 79%, 79%);
+        border-style:solid;border-radius:5px;
+      } 
+      .norm_button{ 
+        width:390px;
+        height:50px;
+        background-color: hsl(235, 18%, 26%);
+        color:white;
+        font-weight: bold; 
+        border-radius:5px;
+      } 
+      .success_page{  
+        display: flex;
+        width:300px;
+    height:350px;
+    border-style: solid; 
+    padding:35px;  
+    border-radius:15px;
+    font-family:Roboto;
+    background-color: white;
+      } 
+      .icon_img{ 
+        height:50px;
+      } 
+      .active_mess{ 
+        font-size:45px;margin-bottom:0px;margin-top:0px;margin-top:10px;color:hsl(235, 18%, 26%); 
+        line-height:45px;
+      } 
+      .confirmation-email{ 
+        line-height:20px;
+      } 
+      .dismiss-button{ 
+        width:300px;height:40px;background-color: hsl(234, 29%, 20%);border-style:none;
+        border-radius:5px;color:white;font-weight: bold;cursor:pointer;margin-top:10px;padding-bottom:10px;
+      } 
+      .email_name{  
+        font-weight: bold;
+        color:hsl(234, 29%, 20%);
+      } 
+      .dismiss-button:active{ 
+        background-color:hsl(4, 100%, 67%);
+      }
+  </style> 
+  
+</head>
+<body> 
+    <div id="main-div"> 
+      <div class="flex_b" id="front">
+        <div class="form"> 
+              <h1>Stay Updated!</h1> 
+              <p id="para">join 60,000+ product managers receiving monthly <br> updates on: </p> 
+              <div class="update">  
+                   <div> 
+                     <img class="icon"src="icon-success.svg" alt="icon of success"> 
+                   </div>
+                   <div> 
+                     <p class="tags" >Product discovery and building what matters</p>
+                   </div>
+                   
+               </div>   
+              
+               <div class="update">  
+                 <div> 
+                   <img class="icon"src="icon-success.svg" alt="icon of success"> 
+                 </div>
+                 <div> 
+                   <p class="tags">Measuring to ensure updates are a success</p>
+                 </div>
+                 
+             </div>  
+             <div class="update">  
+                   <div> 
+                     <img class="icon"src="icon-success.svg" alt="icon of success"> 
+                   </div>
+                   <div> 
+                     <p class="tags">And much more!</p>
+                   </div>
+              
+           </div> 
+           <form id="form_id" style="margin-top:25px; position:relative"> 
+              <label for="email">Email address</label><br>   
+              
+              <span style=" position:absolute;
+              top:0px;
+              right:35px;
+              margin:0px;
+              color:hsl(4, 83%, 56%);" id="message_err"></span>
+              <input id="normal" class="mail" type="email" placeholder="email@company.com" ><br>  
+              <button  class="norm_button"  id="normal_button" onclick="validate()">  
+               Subscribe to monthly newsletter
+              </button> 
+             
+           </form> 
+        </div> 
+        <div class="temp"> 
+           <img class="temp"src="illustration-sign-up-desktop.svg" alt="sign-up template">
+        </div> 
+        <div id="imported-content"></div>
+  </div> 
+    </div>
+
+ 
+    <script language="JavaScript">    
+    
+        validate=()=>{  
+                   
+              if(!document.getElementById('normal').value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){  
+                    
+                    document.getElementById('message_err').innerText="valid email required";  
+                    let normal_button=document.getElementById('normal_button'); 
+                    const errorButton=document.createElement('button'); 
+                    errorButton.id='error'; 
+                    errorButton.className='er_butn';  
+                    errorButton.innerText="Subscribe to monthly newsletter"; 
+                    let parentele=document.getElementById('form_id'); 
+                    parentele.replaceChild(errorButton,normal_button);
+                   
+              } 
+              else{   
+                   let first_div=document.getElementById('front'); 
+                   let active_page=document.createElement('div'); 
+                   active_page.classList.add('success_page'); 
+                   let email_value=document.getElementById('normal').value; 
+                
+                   //to add content to our new div 
+                   let content=`<div>  
+              <img  class="icon_img" src="icon-success.svg" alt="icon of success">  
+            <h1 class="active_mess">Thanks for subscribing!</h1> 
+            <p class="confirmation-email">A confirmation email has been sent to <span id="email" class="email_name">${email_value}</span>.
+               Please open it and click the button inside to confirm your subscription.</p>
+            <button  class="dismiss-button" id="button_id">
+            Dismiss message</button>
+           </div>` 
+           active_page.innerHTML=content;
+           let parent_div=document.getElementById('main-div'); 
+                   parent_div.replaceChild(active_page,first_div); 
+                  //  let button_ele=getElementById('button_id'); 
+                  //  button_ele.addEventListener("click",()=>)
+               
+                 
+    
+              }
+        }
+    </script>
+     
+</body>
+</html>
